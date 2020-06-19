@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `NerdyFix`,
     description: `Technology Consulting`,
-    author: `@gatsbyjs`,
+    author: `Jhon Nunez`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +27,7 @@ module.exports = {
         icon: `src/images/Nf-logo.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-sass',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

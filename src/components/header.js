@@ -1,37 +1,42 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {useStaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image';
 
-import Logo from "../components/logo"
+//https://www.youtube.com/watch?v=ByqLscgK90s
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `white`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Logo />
+
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      nerdyfix: file(relativePath: { eq: "NerdyFix-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return(
+  <header>
+    <div className = "container">
+      <div className = "inner-header">
+        <div className = "logo">
+          <Link to="/"> <Img fluid={data.nerdyfix.childImageSharp.fluid} fadeIn={false} durationFadeIn={0} /> </Link>
+        </div>
+        <div className = "navigation">
+          <nav>
+            <Link to="/AboutBlurb">About</Link>
+            <Link to="/work">Work</Link>
+            <Link to="/contact">Contact</Link>
+          </nav>
+        </div>
       </div>
-
     </div>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

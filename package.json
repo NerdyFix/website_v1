@@ -1,22 +1,26 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "NerdyFix website_v1",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "NerdyFix Technology Consulting",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jhon Nunez <nunezjhon32@gmail.com>",
   "dependencies": {
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-offline": "^3.1.5",
     "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-sharp": "^2.4.7",
+    "gsap": "^3.3.3",
+    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "smooth-scrollbar": "^8.5.2"
   },
   "devDependencies": {
     "prettier": "2.0.4"
